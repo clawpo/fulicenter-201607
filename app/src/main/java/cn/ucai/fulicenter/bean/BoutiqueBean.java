@@ -3,7 +3,7 @@ package cn.ucai.fulicenter.bean;
 import java.io.Serializable;
 
 public class BoutiqueBean implements Serializable {
-    
+
     private int id;
     private String title;
     private String description;
