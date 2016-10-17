@@ -2,15 +2,16 @@ package cn.ucai.fulicenter;
 
 import android.app.Application;
 
-/**
- * Created by clawpo on 2016/10/17.
- */
 
 public class FuLiCenterApplication extends Application {
+    public static FuLiCenterApplication application;
     private static FuLiCenterApplication instance;
 
 
-    public FuLiCenterApplication() {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        application = this;
         instance = this;
     }
 
