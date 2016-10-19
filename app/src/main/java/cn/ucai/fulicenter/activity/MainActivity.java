@@ -3,7 +3,6 @@ package cn.ucai.fulicenter.activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -15,7 +14,7 @@ import cn.ucai.fulicenter.fragment.BoutiqueFragment;
 import cn.ucai.fulicenter.fragment.NewGoodsFragment;
 import cn.ucai.fulicenter.utils.L;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @BindView(R.id.layout_new_good)
     RadioButton mLayoutNewGood;
@@ -40,12 +39,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         L.i("MainActivity onCreate");
-        initView();
-        initFragment();
+        super.onCreate(savedInstanceState);
     }
 
     private void initFragment() {
@@ -63,13 +60,24 @@ public class MainActivity extends AppCompatActivity {
                 .commit();
     }
 
-    private void initView() {
+    @Override
+    protected void initView() {
         rbs = new RadioButton[5];
         rbs[0] = mLayoutNewGood;
         rbs[1] = mLayoutBoutique;
         rbs[2] = mLayoutCategory;
         rbs[3] = mLayoutCart;
         rbs[4] = mLayoutPersonalCenter;
+    }
+
+    @Override
+    protected void initData() {
+        initFragment();
+    }
+
+    @Override
+    protected void setListener() {
+
     }
 
     public void onCheckedChange(View v) {
@@ -115,5 +123,8 @@ public class MainActivity extends AppCompatActivity {
                 rbs[i].setChecked(false);
             }
         }
+    }
+    public void onBackPressed(){
+        finish();
     }
 }
