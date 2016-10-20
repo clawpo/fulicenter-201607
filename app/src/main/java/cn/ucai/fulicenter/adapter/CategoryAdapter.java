@@ -16,6 +16,7 @@ import cn.ucai.fulicenter.R;
 import cn.ucai.fulicenter.bean.CategoryChildBean;
 import cn.ucai.fulicenter.bean.CategoryGroupBean;
 import cn.ucai.fulicenter.utils.ImageLoader;
+import cn.ucai.fulicenter.utils.MFGT;
 
 /**
  * Created by clawpo on 2016/10/20.
@@ -102,10 +103,16 @@ public class CategoryAdapter extends BaseExpandableListAdapter {
         } else {
             holder = (ChildViewHolder) view.getTag();
         }
-        CategoryChildBean child = getChild(groupPosition, childPosition);
+        final CategoryChildBean child = getChild(groupPosition, childPosition);
         if(child!=null){
             ImageLoader.downloadImg(mContext,holder.mIvCategoryChildThumb,child.getImageUrl());
             holder.mTvCategoryChildName.setText(child.getName());
+            holder.mLayoutCategoryChild.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    MFGT.gotoCategoryChildActivity(mContext,child.getId());
+                }
+            });
         }
         return view;
     }

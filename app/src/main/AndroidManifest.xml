@@ -24,6 +24,8 @@
         </activity>
         <activity android:name=".activity.BoutiqueChildActivity">
         </activity>
+        <activity android:name=".activity.CategoryChildActivity">
+        </activity>
     </application>
 
 </manifest>
