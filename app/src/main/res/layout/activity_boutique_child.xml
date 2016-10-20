@@ -4,23 +4,6 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
     <include layout="@layout/common_head_title"/>
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/srl"
-        android:background="@color/list_background"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <include layout="@layout/layout_refresh_title"/>
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </android.support.v7.widget.RecyclerView>
-        </LinearLayout>
-    </android.support.v4.widget.SwipeRefreshLayout>
+    <include layout="@layout/fragment_newgoods"/>
 
 </LinearLayout>
