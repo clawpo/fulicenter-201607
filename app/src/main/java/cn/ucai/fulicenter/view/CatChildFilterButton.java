@@ -56,11 +56,11 @@ public class CatChildFilterButton extends Button {
     private void initPopupWindow() {
         mPopupWindow=new PopupWindow();
         mPopupWindow.setWidth(LinearLayout.LayoutParams.MATCH_PARENT);
-        if(mgvCategory.getAdapter().getCount()<16){
+//        if(mgvCategory.getAdapter().getCount()<16){
             mPopupWindow.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
-        }else{
-            mPopupWindow.setHeight(ConvertUtils.px2dp(mContext, 200));
-        }
+//        }else{
+//            mPopupWindow.setHeight(ConvertUtils.px2dp(mContext, 200));
+//        }
         mPopupWindow.setTouchable(true);
         mPopupWindow.setOutsideTouchable(true);
         mPopupWindow.setBackgroundDrawable(new ColorDrawable(0xbb000000));
@@ -150,7 +150,7 @@ public class CatChildFilterButton extends Button {
                     }
                     Intent intent=new Intent(mContext, CategoryChildActivity.class);
                     intent.putExtra(I.CategoryChild.CAT_ID, child.getId());
-                    intent.putExtra("childList", Children);
+                    intent.putExtra(I.CategoryChild.ID, Children);
                     intent.putExtra(I.CategoryGroup.NAME, mbtnTop.getText().toString());
                     mContext.startActivity(intent);
                     ((CategoryChildActivity)mContext).finish();
