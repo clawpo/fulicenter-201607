@@ -8,6 +8,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.ucai.fulicenter.R;
+import cn.ucai.fulicenter.utils.MFGT;
 
 public class LoginActivity extends BaseActivity {
 
@@ -44,6 +45,7 @@ public class LoginActivity extends BaseActivity {
             case R.id.btn_login:
                 break;
             case R.id.btn_register:
+                MFGT.gotoRegister(this);
                 break;
         }
     }
