@@ -26,6 +26,8 @@
         </activity>
         <activity android:name=".activity.CategoryChildActivity">
         </activity>
+        <activity android:name=".activity.LoginActivity">
+        </activity>
     </application>
 
 </manifest>
