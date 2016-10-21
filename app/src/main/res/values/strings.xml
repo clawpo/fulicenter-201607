@@ -21,4 +21,8 @@
     <string name="register_success">register success</string>
     <string name="register_fail_exists">user name exists</string>
     <string name="login">Login</string>
+    <string name="login_fail">login fail</string>
+    <string name="logining">logining</string>
+    <string name="login_fail_unknow_user">login fail,unknow username</string>
+    <string name="login_fail_error_password">login fail,error password</string>
 </resources>
