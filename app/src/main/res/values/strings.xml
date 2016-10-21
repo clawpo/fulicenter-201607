@@ -5,4 +5,20 @@
     <string name="now_refresh">now_refresh</string>
     <string name="no_more">no more</string>
     <string name="load_more">load more</string>
+    <string name="user_name">User name</string>
+    <string name="nickname">NickName</string>
+    <string name="password">Password</string>
+    <string name="confirmpassword">Confirm Password</string>
+    <string name="register">Register</string>
+    <string name="user_name_connot_be_empty">user name connot be empty</string>
+    <string name="illegal_user_name">illegal user name</string>
+    <string name="nick_name_connot_be_empty">nick name connot be empty</string>
+    <string name="password_connot_be_empty">password connot be empty</string>
+    <string name="confirm_password_connot_be_empty">confirm password connot be empty</string>
+    <string name="two_input_password">illegal password</string>
+    <string name="registering">registering</string>
+    <string name="register_fail">register fail</string>
+    <string name="register_success">register success</string>
+    <string name="register_fail_exists">user name exists</string>
+    <string name="login">Login</string>
 </resources>
