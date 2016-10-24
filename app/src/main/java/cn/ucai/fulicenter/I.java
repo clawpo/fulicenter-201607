@@ -19,6 +19,7 @@ public interface I {
     int TYPE_FOOTER=1;
 
     int REQUEST_CODE_REGISTER = 101;
+    int REQUEST_CODE_LOGIN = 102;
 
     /** BeeColud APP ID */
     String BEE_COLUD_APP_ID = "3539b590-4859-4128-87a3-5fb8b86b94f6";
@@ -328,6 +329,7 @@ public interface I {
 
     /** 上传头像图片的类型：user_avatar或group_icon */
     String AVATAR_TYPE = "avatarType";
+    String AVATAR_SUFFIX = "m_avatar_suffix";
     /** 用户的账号或群组的环信id */
     String NAME_OR_HXID = "name_or_hxid";
     /** 客户端发送的获取服务端状态的请求 */
@@ -418,4 +420,6 @@ public interface I {
     String DOWNLOAD_IMG_URL= I.SERVER_ROOT+
             REQUEST_DOWNLOAD_IMAGE+I.QUESTION+ IMAGE_URL+"=";
 
+    String DOWNLOAD_AVATAR_URL = I.SERVER_ROOT +
+            REQUEST_DOWNLOAD_AVATAR + I.QUESTION;
 }
