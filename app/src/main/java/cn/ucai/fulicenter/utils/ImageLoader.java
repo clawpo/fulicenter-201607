@@ -15,6 +15,7 @@ import java.net.URLEncoder;
 
 import cn.ucai.fulicenter.I;
 import cn.ucai.fulicenter.R;
+import cn.ucai.fulicenter.bean.User;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
@@ -356,6 +357,25 @@ public class ImageLoader {
                 .defaultPicture(R.drawable.nopic)
                 .imageView(imageView)
                 .setDragging(isDragging)
+                .showImage(context);
+    }
+    //http://101.251.196.90:8000/FuLiCenterServerV2.0/downloadAvatar?
+    // name_or_hxid=a952700&avatarType=user_avatar&m_avatar_suffix=.jpg&width=200&height=200
+
+    public static String getAvatarUrl(User user){
+        if(user!=null) {
+            String url = I.DOWNLOAD_AVATAR_URL + I.NAME_OR_HXID + "=" + user.getMuserName()
+                    + I.AND + I.AVATAR_TYPE + "=" + user.getMavatarType() + I.AND + I.AVATAR_SUFFIX
+                    + "=" + user.getMavatarSuffix() + I.AND + "width=200&height=200";
+            L.e("useravatar=" + url);
+            return url;
+        }
+        return null;
+    }
+    public static void setAvatar(String url,Context context,ImageView imageView){
+        ImageLoader.build(url)
+                .defaultPicture(R.drawable.contactlogo)
+                .imageView(imageView)
                 .showImage(context);
     }
 }
