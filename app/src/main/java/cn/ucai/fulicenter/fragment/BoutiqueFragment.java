@@ -77,7 +77,6 @@ public class BoutiqueFragment extends BaseFragment {
             public void onSuccess(BoutiqueBean[] result) {
                 mSrl.setRefreshing(false);
                 mTvRefresh.setVisibility(View.GONE);
-                L.e("result="+result);
                 if(result!=null && result.length>0){
                     ArrayList<BoutiqueBean> list = ConvertUtils.array2List(result);
                     mAdapter.initData(list);
