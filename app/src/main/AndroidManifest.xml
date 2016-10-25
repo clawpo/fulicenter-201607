@@ -32,6 +32,8 @@
         </activity>
         <activity android:name=".activity.UserProfileActivity">
         </activity>
+        <activity android:name=".activity.UpdateNickActivity">
+        </activity>
     </application>
 
 </manifest>

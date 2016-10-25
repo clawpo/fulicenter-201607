@@ -14,10 +14,10 @@ import cn.ucai.fulicenter.activity.GoodsDetailActivity;
 import cn.ucai.fulicenter.activity.LoginActivity;
 import cn.ucai.fulicenter.activity.MainActivity;
 import cn.ucai.fulicenter.activity.RegisterActivity;
+import cn.ucai.fulicenter.activity.UpdateNickActivity;
 import cn.ucai.fulicenter.activity.UserProfileActivity;
 import cn.ucai.fulicenter.bean.BoutiqueBean;
 import cn.ucai.fulicenter.bean.CategoryChildBean;
-
 
 
 public class MFGT {
@@ -84,6 +84,10 @@ public class MFGT {
 
     public static void gotoSettings(Activity context){
         startActivity(context, UserProfileActivity.class);
+    }
+
+    public static void gotoUpdateNick(Activity context){
+        startActivityForResult(context,new Intent(context, UpdateNickActivity.class),I.REQUEST_CODE_NICK);
     }
 
 }

@@ -34,4 +34,5 @@
     <string name="update_user_nick">update user nick</string>
     <string name="update_fail">update fail</string>
     <string name="update_nick_fail_unmodify">user nick unmodify</string>
+    <string name="update_user_nick_success">update user nick success</string>
 </resources>
