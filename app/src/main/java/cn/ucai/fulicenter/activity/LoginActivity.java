@@ -23,6 +23,7 @@ import cn.ucai.fulicenter.utils.CommonUtils;
 import cn.ucai.fulicenter.utils.L;
 import cn.ucai.fulicenter.utils.MFGT;
 import cn.ucai.fulicenter.utils.ResultUtils;
+import cn.ucai.fulicenter.view.DisplayUtils;
 
 
 public class LoginActivity extends BaseActivity {
@@ -47,7 +48,7 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-
+        DisplayUtils.initBackWithTitle(mContext,getResources().getString(R.string.login));
     }
 
     @Override

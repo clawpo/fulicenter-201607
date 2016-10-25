@@ -38,6 +38,7 @@ public class PersonalCenterFragment extends BaseFragment {
     MainActivity mContext;
     @BindView(R.id.center_user_order_lis)
     GridView mCenterUserOrderLis;
+    User user = null;
 
     @Nullable
     @Override
@@ -56,7 +57,7 @@ public class PersonalCenterFragment extends BaseFragment {
 
     @Override
     protected void initData() {
-        User user = FuLiCenterApplication.getUser();
+        user = FuLiCenterApplication.getUser();
         L.e(TAG, "user=" + user);
         if (user == null) {
             MFGT.gotoLogin(mContext);
@@ -69,6 +70,17 @@ public class PersonalCenterFragment extends BaseFragment {
     @Override
     protected void setListener() {
 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        user = FuLiCenterApplication.getUser();
+        L.e(TAG, "user=" + user);
+        if (user != null) {
+            ImageLoader.setAvatar(ImageLoader.getAvatarUrl(user), mContext, mIvUserAvatar);
+            mTvUserName.setText(user.getMuserNick());
+        }
     }
 
     @OnClick({R.id.tv_center_settings,R.id.center_user_info})
