@@ -26,4 +26,12 @@
     <string name="login_fail_unknow_user">登录失败,账号不存在</string>
     <string name="login_fail_error_password">登录失败,错误的用户名或密码</string>
     <string name="user_database_error">用户数据库操作异常</string>
+    <string name="logout">退出</string>
+    <string name="user_profile_avatar">用户头像</string>
+    <string name="username_connot_be_modify">用户名作为登录名不能修改</string>
+    <string name="user_profile">个人资料</string>
+    <string name="save">保存</string>
+    <string name="update_user_nick">修改昵称</string>
+    <string name="update_fail">修改昵称失败</string>
+    <string name="update_nick_fail_unmodify">昵称未修改</string>
 </resources>

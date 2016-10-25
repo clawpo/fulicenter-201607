@@ -26,4 +26,12 @@
     <string name="login_fail_unknow_user">login fail,unknow username</string>
     <string name="login_fail_error_password">login fail,error password</string>
     <string name="user_database_error">user database error</string>
+    <string name="logout">logout</string>
+    <string name="user_profile_avatar">user avatar</string>
+    <string name="username_connot_be_modify">username connot be modify</string>
+    <string name="user_profile">user profile</string>
+    <string name="save">save</string>
+    <string name="update_user_nick">update user nick</string>
+    <string name="update_fail">update fail</string>
+    <string name="update_nick_fail_unmodify">user nick unmodify</string>
 </resources>
