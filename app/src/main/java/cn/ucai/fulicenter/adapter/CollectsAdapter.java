@@ -15,10 +15,16 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import cn.ucai.fulicenter.FuLiCenterApplication;
 import cn.ucai.fulicenter.I;
 import cn.ucai.fulicenter.R;
 import cn.ucai.fulicenter.bean.CollectBean;
+import cn.ucai.fulicenter.bean.MessageBean;
+import cn.ucai.fulicenter.net.NetDao;
+import cn.ucai.fulicenter.net.OkHttpUtils;
+import cn.ucai.fulicenter.utils.CommonUtils;
 import cn.ucai.fulicenter.utils.ImageLoader;
+import cn.ucai.fulicenter.utils.L;
 import cn.ucai.fulicenter.utils.MFGT;
 import cn.ucai.fulicenter.view.FooterViewHolder;
 
@@ -73,7 +79,7 @@ public class CollectsAdapter extends Adapter {
             CollectBean goods = mList.get(position);
             ImageLoader.downloadImg(mContext,vh.mIvGoodsThumb,goods.getGoodsThumb());
             vh.mTvGoodsName.setText(goods.getGoodsName());
-            vh.mLayoutGoods.setTag(goods.getGoodsId());
+            vh.mLayoutGoods.setTag(goods);
         }
     }
 
@@ -123,8 +129,31 @@ public class CollectsAdapter extends Adapter {
         }
         @OnClick(R.id.layout_goods)
         public void onGoodsItemClick(){
-            int goodsId = (int) mLayoutGoods.getTag();
-            MFGT.gotoGoodsDetailsActivity(mContext,goodsId);
+            CollectBean goods = (CollectBean) mLayoutGoods.getTag();
+            MFGT.gotoGoodsDetailsActivity(mContext,goods.getGoodsId());
+        }
+        @OnClick(R.id.iv_collect_del)
+        public void deleteCollect(){
+            final CollectBean goods = (CollectBean) mLayoutGoods.getTag();
+            String username = FuLiCenterApplication.getUser().getMuserName();
+            NetDao.deleteCollect(mContext, username, goods.getGoodsId(), new OkHttpUtils.OnCompleteListener<MessageBean>() {
+                @Override
+                public void onSuccess(MessageBean result) {
+                    if(result!=null && result.isSuccess()){
+                        mList.remove(goods);
+                        notifyDataSetChanged();
+                    }else{
+                        CommonUtils.showLongToast(result!=null?result.getMsg():
+                                mContext.getResources().getString(R.string.delete_collect_fail));
+                    }
+                }
+
+                @Override
+                public void onError(String error) {
+                    L.e("error="+error);
+                    CommonUtils.showLongToast(mContext.getResources().getString(R.string.delete_collect_fail));
+                }
+            });
         }
     }
 

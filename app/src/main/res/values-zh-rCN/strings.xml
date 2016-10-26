@@ -39,4 +39,5 @@
     <string name="update_user_avatar_fail">更新用户头像失败</string>
     <string name="update_user_avatar_success">更新用户头像成功</string>
     <string name="collect_title">收藏的宝贝</string>
+    <string name="delete_collect_fail">删除收藏失败</string>
 </resources>
