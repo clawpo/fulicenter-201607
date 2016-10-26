@@ -1,5 +1,6 @@
 package cn.ucai.fulicenter.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.widget.ImageView;
@@ -147,6 +148,7 @@ public class GoodsDetailActivity extends BaseActivity {
                             isCollected = !isCollected;
                             updateGoodsCollectStatus();
                             CommonUtils.showLongToast(result.getMsg());
+                            mContext.sendStickyBroadcast(new Intent("update_collect").putExtra(I.Collect.GOODS_ID,goodsId));
                         }
                     }
 

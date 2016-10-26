@@ -113,6 +113,11 @@ public class CollectsAdapter extends Adapter {
         notifyDataSetChanged();
     }
 
+    public void remove(CollectBean bean) {
+        mList.remove(bean);
+        notifyDataSetChanged();
+    }
+
     class ColelctsViewHolder extends ViewHolder{
         @BindView(R.id.ivGoodsThumb)
         ImageView mIvGoodsThumb;
