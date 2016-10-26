@@ -83,6 +83,25 @@ public class User {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+
+        User user = (User) o;
+
+        if (!getMuserName().equals(user.getMuserName())) return false;
+        return getMavatarLastUpdateTime().equals(user.getMavatarLastUpdateTime());
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getMuserName().hashCode();
+        result = 31 * result + getMavatarLastUpdateTime().hashCode();
+        return result;
+    }
+
+    @Override
     public String toString() {
         return "User{" +
                 "muserName='" + muserName + '\'' +
