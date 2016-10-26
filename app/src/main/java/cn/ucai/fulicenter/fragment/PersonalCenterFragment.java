@@ -98,6 +98,11 @@ public class PersonalCenterFragment extends BaseFragment {
         MFGT.gotoSettings(mContext);
     }
 
+    @OnClick(R.id.layout_center_collect)
+    public void gotoCollectsList(){
+        MFGT.gotoCollects(mContext);
+    }
+
     private void initOrderList() {
         ArrayList<HashMap<String, Object>> data = new ArrayList<HashMap<String, Object>>();
         HashMap<String, Object> order1 = new HashMap<String, Object>();
@@ -153,7 +158,7 @@ public class PersonalCenterFragment extends BaseFragment {
             public void onSuccess(MessageBean result) {
                 if (result != null && result.isSuccess()) {
                     mTvCollectCount.setText(result.getMsg());
-                }else{
+                } else {
                     mTvCollectCount.setText(String.valueOf(0));
                 }
             }
@@ -161,7 +166,7 @@ public class PersonalCenterFragment extends BaseFragment {
             @Override
             public void onError(String error) {
                 mTvCollectCount.setText(String.valueOf(0));
-                L.e(TAG,"error="+error);
+                L.e(TAG, "error=" + error);
             }
         });
     }

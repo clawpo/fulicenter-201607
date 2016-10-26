@@ -38,4 +38,5 @@
     <string name="update_user_avatar">update user avatar</string>
     <string name="update_user_avatar_fail">update user avatar fail</string>
     <string name="update_user_avatar_success">update user avatar success</string>
+    <string name="collect_title">collects</string>
 </resources>
