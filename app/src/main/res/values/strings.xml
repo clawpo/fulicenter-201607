@@ -42,4 +42,5 @@
     <string name="delete_collect_fail">delete collect fail</string>
     <string name="add_goods_success">add goods success</string>
     <string name="add_goods_fail">add goods fail</string>
+    <string name="order_nothing">order is noting</string>
 </resources>

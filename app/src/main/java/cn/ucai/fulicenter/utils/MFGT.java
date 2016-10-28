@@ -14,6 +14,7 @@ import cn.ucai.fulicenter.activity.CollectsActivity;
 import cn.ucai.fulicenter.activity.GoodsDetailActivity;
 import cn.ucai.fulicenter.activity.LoginActivity;
 import cn.ucai.fulicenter.activity.MainActivity;
+import cn.ucai.fulicenter.activity.OrderActivity;
 import cn.ucai.fulicenter.activity.RegisterActivity;
 import cn.ucai.fulicenter.activity.UpdateNickActivity;
 import cn.ucai.fulicenter.activity.UserProfileActivity;
@@ -99,6 +100,11 @@ public class MFGT {
 
     public static void gotoCollects(Activity context){
         startActivity(context, CollectsActivity.class);
+    }
+
+    public static void gotoBuy(Activity context,String cartIds){
+        Intent intent = new Intent(context, OrderActivity.class).putExtra(I.Cart.ID,cartIds);
+        startActivity(context,intent);
     }
 
 }
