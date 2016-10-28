@@ -40,4 +40,6 @@
     <string name="update_user_avatar_success">更新用户头像成功</string>
     <string name="collect_title">收藏的宝贝</string>
     <string name="delete_collect_fail">删除收藏失败</string>
+    <string name="add_goods_success">添加购物车成功</string>
+    <string name="add_goods_fail">添加购物车失败</string>
 </resources>

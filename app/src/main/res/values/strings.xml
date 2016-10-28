@@ -40,4 +40,6 @@
     <string name="update_user_avatar_success">update user avatar success</string>
     <string name="collect_title">collects</string>
     <string name="delete_collect_fail">delete collect fail</string>
+    <string name="add_goods_success">add goods success</string>
+    <string name="add_goods_fail">add goods fail</string>
 </resources>
