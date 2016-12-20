@@ -5,7 +5,7 @@
     android:id="@+id/activity_collects"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cn.ucai.fulicenter.activity.CollectsActivity">
+    tools:context=".controller.activity.CollectsActivity">
     <include layout="@layout/common_head_title_white"/>
     <LinearLayout
         android:layout_width="match_parent"

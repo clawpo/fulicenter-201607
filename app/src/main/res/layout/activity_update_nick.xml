@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/list_background"
-    tools:context="cn.ucai.fulicenter.activity.UpdateNickActivity">
+    tools:context=".controller.activity.UpdateNickActivity">
     <include layout="@layout/common_head_title_white"/>
     <EditText
         android:id="@+id/et_update_user_name"

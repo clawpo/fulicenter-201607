@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import cn.ucai.fulicenter.R;
-import cn.ucai.fulicenter.utils.MFGT;
+import cn.ucai.fulicenter.model.utils.MFGT;
 
 /**
  * Created by clawpo on 16/8/3.

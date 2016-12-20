@@ -30,30 +30,30 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".controller.activity.MainActivity">
         </activity>
-        <activity android:name=".activity.SplashActivity">
+        <activity android:name=".controller.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.GoodsDetailActivity">
+        <activity android:name=".controller.activity.GoodsDetailActivity">
         </activity>
-        <activity android:name=".activity.BoutiqueChildActivity">
+        <activity android:name=".controller.activity.BoutiqueChildActivity">
         </activity>
-        <activity android:name=".activity.CategoryChildActivity">
+        <activity android:name=".controller.activity.CategoryChildActivity">
         </activity>
-        <activity android:name=".activity.LoginActivity">
+        <activity android:name=".controller.activity.LoginActivity">
         </activity>
-        <activity android:name=".activity.RegisterActivity">
+        <activity android:name=".controller.activity.RegisterActivity">
         </activity>
-        <activity android:name=".activity.UserProfileActivity">
+        <activity android:name=".controller.activity.UserProfileActivity">
         </activity>
-        <activity android:name=".activity.UpdateNickActivity">
+        <activity android:name=".controller.activity.UpdateNickActivity">
         </activity>
-        <activity android:name=".activity.CollectsActivity">
+        <activity android:name=".controller.activity.CollectsActivity">
         </activity>
         <!-- shareSDK begin -->
         <activity
@@ -86,7 +86,7 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         shareSDK end
-        <activity android:name=".activity.OrderActivity">
+        <activity android:name=".controller.activity.OrderActivity">
         </activity>
         <!--pinggg begin-->
         <!-- Ping++ SDK -->

@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/good_detail_bg"
-    tools:context="cn.ucai.fulicenter.activity.GoodsDetailActivity">
+    tools:context=".controller.activity.GoodsDetailActivity">
     <RelativeLayout
         android:id="@+id/layout_title"
         android:layout_width="match_parent"
