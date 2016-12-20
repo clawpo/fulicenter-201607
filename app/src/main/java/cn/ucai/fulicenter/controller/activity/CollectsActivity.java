@@ -22,7 +22,7 @@ import cn.ucai.fulicenter.controller.adapter.CollectsAdapter;
 import cn.ucai.fulicenter.bean.CollectBean;
 import cn.ucai.fulicenter.bean.User;
 import cn.ucai.fulicenter.model.net.NetDao;
-import cn.ucai.fulicenter.model.net.OkHttpUtils;
+import cn.ucai.fulicenter.model.utils.OkHttpUtils;
 import cn.ucai.fulicenter.model.utils.CommonUtils;
 import cn.ucai.fulicenter.model.utils.ConvertUtils;
 import cn.ucai.fulicenter.model.utils.L;

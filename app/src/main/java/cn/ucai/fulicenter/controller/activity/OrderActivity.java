@@ -29,7 +29,7 @@ import cn.ucai.fulicenter.bean.CartBean;
 import cn.ucai.fulicenter.bean.MessageBean;
 import cn.ucai.fulicenter.bean.User;
 import cn.ucai.fulicenter.model.net.NetDao;
-import cn.ucai.fulicenter.model.net.OkHttpUtils;
+import cn.ucai.fulicenter.model.utils.OkHttpUtils;
 import cn.ucai.fulicenter.model.utils.CommonUtils;
 import cn.ucai.fulicenter.model.utils.L;
 import cn.ucai.fulicenter.model.utils.ResultUtils;

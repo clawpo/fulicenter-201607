@@ -18,11 +18,11 @@ import cn.ucai.fulicenter.controller.adapter.GoodsAdapter;
 import cn.ucai.fulicenter.bean.BoutiqueBean;
 import cn.ucai.fulicenter.bean.NewGoodsBean;
 import cn.ucai.fulicenter.model.net.NetDao;
-import cn.ucai.fulicenter.model.net.OkHttpUtils;
 import cn.ucai.fulicenter.model.utils.CommonUtils;
 import cn.ucai.fulicenter.model.utils.ConvertUtils;
 import cn.ucai.fulicenter.model.utils.L;
 import cn.ucai.fulicenter.model.utils.MFGT;
+import cn.ucai.fulicenter.model.utils.OkHttpUtils;
 import cn.ucai.fulicenter.view.SpaceItemDecoration;
 
 public class BoutiqueChildActivity extends BaseActivity {
